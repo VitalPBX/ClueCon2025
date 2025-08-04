@@ -4,7 +4,8 @@
     "host": "${HOST|0.0.0.0}",
     "port": "${PORT|3000}",
     "use_pom": true,
-    "route": "/agent"
+    "route": "/agent",
+    "record_call": true
   },
   "security": {
     "ssl_enabled": "${SSL_ENABLED|false}",
