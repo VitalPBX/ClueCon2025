@@ -21,4 +21,6 @@ pip install signalwire-agents
 ```
 
 ## Run the Agent
+```bash
 python3 signalwire.py
+```
