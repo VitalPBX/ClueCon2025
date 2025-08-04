@@ -2,7 +2,9 @@
   "service": {
     "name": "my-service",
     "host": "${HOST|0.0.0.0}",
-    "port": "${PORT|3000}"
+    "port": "${PORT|3000}",
+    "use_pom": true,
+    "route": "/agent"
   },
   "security": {
     "ssl_enabled": "${SSL_ENABLED|false}",
