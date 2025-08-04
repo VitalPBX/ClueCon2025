@@ -18,6 +18,7 @@ Set up your virtual environment:
 python -m venv .venv
 source .venv/bin/activate
 pip install signalwire-agents
+pip install python-dotenv
 ```
 
 ## Run the Agent
