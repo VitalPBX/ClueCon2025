@@ -1,0 +1,24 @@
+{
+  "service": {
+    "name": "my-service",
+    "host": "${HOST|0.0.0.0}",
+    "port": "${PORT|3000}"
+  },
+  "security": {
+    "ssl_enabled": "${SSL_ENABLED|false}",
+    "ssl_cert_path": "${SSL_CERT|/etc/ssl/cert.pem}",
+    "ssl_key_path": "${SSL_KEY|/etc/ssl/key.pem}",
+    "auth": {
+      "basic": {
+        "enabled": true,
+        "user": "${AUTH_USER|signalwire}",
+        "password": "${AUTH_PASSWORD}"
+      },
+      "bearer": {
+        "enabled": "${BEARER_ENABLED|false}",
+        "token": "${BEARER_TOKEN}"
+      }
+    },
+    "rate_limit": "${RATE_LIMIT|60}"
+  }
+}

@@ -1,13 +1,13 @@
 from signalwire_agents import AgentBase
+from dotenv import load_dotenv
+
+# Load ENV Variables
+load_dotenv()
 
 class MyAgent(AgentBase):
-    def __init__(self):
+    def __init__(self, **kwargs):
         super().__init__(
-            name="Jane",
-            route="/agent",
-            host="0.0.0.0",
-            port=3000,
-            use_pom=True  # Enable Prompt Object Model
+            name="Jane", **kwargs
         )
         
 
@@ -35,7 +35,7 @@ class MyAgent(AgentBase):
         self.set_post_prompt("Please summarize the key points of this conversation.")
 
 def main():
-    agent = MyAgent()
+    agent = MyAgent(config_file="./config.json")
     
     print("Starting agent server...")
     print("Note: Works in any deployment mode (server/CGI/Lambda)")
